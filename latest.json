@@ -4,8 +4,8 @@
   "vix": 17.01,
   "move": 74.95,
   "dxy": 99.17,
-  "dgs10": 4.493,
-  "oas_hy": null,
+  "dgs10": 4.5,
+  "oas_hy": 2.72,
   "nfci": null,
   "mvrv": 1.4146,
   "rsi_14": 42.71,
@@ -20,6 +20,6 @@
   "usd_krw": 1514.79,
   "nupl": 0.2931,
   "hashrate": 1113686990.0,
-  "generated_at": "2026-05-28T03:04:07.699203Z",
+  "generated_at": "2026-05-28T03:12:42.121411Z",
   "engine": "SOLIDUS_v3.1.0_HALVING_CONVICTION"
 }
