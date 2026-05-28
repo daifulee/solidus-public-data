@@ -50,8 +50,10 @@ print("=" * 60)
 if CSV_PATH.exists():
     df_existing = pd.read_csv(CSV_PATH, parse_dates=["Date"])
     last_date = df_existing["Date"].max()
-    fetch_start = (last_date + timedelta(days=1)).strftime("%Y-%m-%d")
+    # ★ 최소 7일 범위 보장 (1~2일 범위에서 Yahoo가 BTC 미반환 방지)
+    fetch_start = (last_date - timedelta(days=6)).strftime("%Y-%m-%d")
     print(f"📂 기존 데이터: {len(df_existing)}행 (~{last_date.date()})")
+    print(f"   (최소 7일 오버랩 수집 → 중복은 자동 제거)")
 else:
     df_existing = None
     fetch_start = BACKFILL_START
@@ -59,10 +61,6 @@ else:
 
 fetch_end = datetime.utcnow().strftime("%Y-%m-%d")
 print(f"📡 수집 범위: {fetch_start} ~ {fetch_end}")
-
-if fetch_start >= fetch_end:
-    print("✅ 이미 최신 — 종료")
-    exit(0)
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -228,8 +226,21 @@ except Exception as e:
 print("\n🔧 병합...")
 
 if df_yahoo is None or "BTC_Close" not in df_yahoo.columns:
-    print("❌ BTC 가격 없음 — 종료")
-    exit(1)
+    print("⚠️ BTC 가격 미수신 — 신규 데이터 없음 (정상)")
+    if df_existing is not None and len(df_existing) > 0:
+        last = df_existing.iloc[-1]
+        latest = {
+            "date": str(last["Date"])[:10],
+            "btc_close": round(float(last.get("BTC_Close",0)),2) if pd.notna(last.get("BTC_Close")) else None,
+            "phase": last.get("CyclePhase", "UNKNOWN"),
+            "note": "no_new_data",
+            "generated_at": datetime.utcnow().isoformat() + "Z",
+            "engine": "SOLIDUS_v3.1.0_HALVING_CONVICTION",
+        }
+        with open(LATEST_PATH, "w") as f:
+            json.dump(latest, f, indent=2, ensure_ascii=False)
+        print(f"✅ latest.json 유지: {latest['date']}")
+    exit(0)
 
 # BTC 기준 날짜
 btc_dates = df_yahoo[["BTC_Close"]].dropna().index
