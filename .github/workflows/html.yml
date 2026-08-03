@@ -1,0 +1,49 @@
+name: 📊 SOLIDUS HTML Briefing
+
+# solidus-public-data 레포 전용 워크플로 (.github/workflows/html.yml)
+# 데이터 갱신(fetcher, 실측 착지 KST 16~17시대) 이후 HTML 브리핑 재생성 → 커밋.
+# GHA cron 은 best-effort — 2회 스케줄로 착지 지연을 흡수하고,
+# 열람 시점 신선도는 페이지 내 FRESHGUARD 배지가 최종 판별한다.
+on:
+  schedule:
+    - cron: '30 8 * * *'    # UTC 08:30 = KST 17:30 (데이터 착지 직후)
+    - cron: '0 13 * * *'    # UTC 13:00 = KST 22:00 (캐치업)
+  workflow_dispatch:         # 수동 실행
+
+permissions:
+  contents: write            # briefing.html / index.html 커밋용
+
+concurrency:
+  group: solidus-html
+  cancel-in-progress: false
+
+jobs:
+  html:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🐍 Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 의존성 설치
+        run: pip install pandas numpy requests
+
+      - name: 📊 HTML 브리핑 생성 (VGUARD 실패 시 워크플로 FAIL)
+        run: python solidus_brief_html.py
+
+      - name: 📤 커밋 (변경 시에만)
+        run: |
+          git config user.name "solidus-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add briefing.html index.html
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "📊 HTML briefing $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
