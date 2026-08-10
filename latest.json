@@ -1,25 +1,89 @@
 {
-  "date": "2026-08-08",
-  "btc_close": 64904.69,
+  "date": "2026-08-09",
+  "btc_close": 64844.89,
   "vix": 14.9,
   "move": 72.03,
   "dxy": 99.6,
   "dgs10": 4.66,
   "oas_hy": 2.71,
   "nfci": -0.529,
-  "mvrv": 1.4146,
-  "rsi_14": 54.65,
-  "btc_100dma": 67995.56,
-  "btc_spy_corr120": 0.341,
+  "mvrv": 1.2301,
+  "rsi_14": 54.25,
+  "btc_100dma": 67862.22,
+  "btc_spy_corr120": 0.3411,
   "phase": "WINTER",
   "cycle": 4,
-  "days_since_halving": 840,
-  "fear_greed": 30.0,
+  "days_since_halving": 841,
+  "fear_greed": 31.0,
   "gold": 4340.7,
   "spy": 773.26,
   "usd_krw": 1422.3,
-  "nupl": 0.2931,
-  "hashrate": 1113686990.0,
-  "generated_at": "2026-08-10T07:02:37.395674Z",
-  "engine": "SOLIDUS_v3.1.0_HALVING_CONVICTION"
+  "nupl": 0.1871,
+  "hashrate": 906199298.0,
+  "generated_at": "2026-08-10T09:14:06.488289+00:00",
+  "engine": "SOLIDUS_v3.2.0_HALVING_CONVICTION",
+  "fetcher_version": "2.0.0",
+  "onchain_status": {
+    "primary": "coinmetrics_community_api_v4",
+    "fallback": null,
+    "columns": {
+      "CapMVRVCur": {
+        "source": "cm_api",
+        "latest": "2026-08-09"
+      },
+      "CapMrktCurUSD": {
+        "source": "cm_api",
+        "latest": "2026-08-09"
+      },
+      "AdrActCnt": {
+        "source": "cm_api",
+        "latest": "2026-08-09"
+      },
+      "AdrBalCnt": {
+        "source": "cm_api",
+        "latest": "2026-08-09"
+      },
+      "HashRate": {
+        "source": "cm_api",
+        "latest": "2026-08-09"
+      },
+      "TxCnt": {
+        "source": "cm_api",
+        "latest": "2026-08-09"
+      },
+      "SplyCur": {
+        "source": "cm_api",
+        "latest": "2026-08-09"
+      },
+      "FlowInExUSD": {
+        "source": "cm_api",
+        "latest": "2026-08-09"
+      },
+      "FlowOutExUSD": {
+        "source": "cm_api",
+        "latest": "2026-08-09"
+      }
+    },
+    "errors": []
+  },
+  "data_health": {
+    "gate_version": "1.0.0",
+    "checked_at": "2026-08-10T09:14:16.275689+00:00",
+    "status": "OK",
+    "critical": [],
+    "warn": [],
+    "info": [
+      {
+        "column": "ICSA",
+        "note": "전 구간 미수집"
+      },
+      {
+        "column": "UNRATE",
+        "note": "전 구간 미수집"
+      }
+    ],
+    "last_date": "2026-08-09",
+    "lag_days": 1,
+    "rows": 3874
+  }
 }
