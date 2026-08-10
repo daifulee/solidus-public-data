@@ -1,0 +1,43 @@
+name: 🔬 SOLIDUS 온체인 대체소스 프로브
+
+# ══════════════════════════════════════════════════════════════════
+# 목적: 온체인 소스(coinmetrics/data GitHub CSV)가 2026-05-24 이후 영구 중단.
+#       대체 소스 후보 6종을 GHA 러너(무제한 인터넷)에서 1회 실측한다.
+# 성격: 읽기 전용. 데이터 파일을 커밋하지 않는다. 안전.
+# 사용: Actions 탭 → 본 워크플로 선택 → Run workflow (수동 실행 전용)
+# 산출: 로그 전문 + probe_result.json (Artifacts에서 다운로드)
+# ══════════════════════════════════════════════════════════════════
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🐍 Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 의존성 설치
+        run: pip install requests pandas
+
+      - name: 🔬 대체 소스 실측
+        run: python scripts/onchain_probe.py
+
+      - name: 📤 결과 아티팩트 업로드
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: onchain-probe-result
+          path: probe_result.json
+          retention-days: 14
