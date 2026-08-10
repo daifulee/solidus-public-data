@@ -1,5 +1,13 @@
 name: 💰 SOLIDUS Daily Data Fetch
 
+# ══════════════════════════════════════════════════════════════════
+# v2.0.0 (2026-08-10) — 온체인 79일 정지 사고 근본 복구
+#   [1] 🛡️ 건전성 게이트 2단 배치 (기록 → 커밋 → 판정)
+#       데이터는 보존하면서 불건전 시 소비자 연쇄만 차단한다.
+#   [2] 🔔 P1-1 dispatch 스니펫 적용 (미적용 상태였음 → HTML STALE 원인)
+#       PRIVATE_DISPATCH_PAT 미설정이면 조용히 건너뛴다 (실패시키지 않음).
+# ══════════════════════════════════════════════════════════════════
+
 on:
   schedule:
     # 매일 UTC 06:00 (KST 15:00) — 미국 장마감 후
@@ -12,7 +20,7 @@ permissions:
 jobs:
   fetch-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: 📥 Checkout
@@ -31,7 +39,12 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/daily_update.py
 
+      - name: 🛡️ 건전성 게이트 (판정 기록)
+        if: always()
+        run: python scripts/health_gate.py
+
       - name: 📤 커밋 + 푸시
+        if: always()
         run: |
           git config user.name "solidus-bot"
           git config user.email "solidus-bot@users.noreply.github.com"
@@ -44,3 +57,23 @@ jobs:
             git commit -m "📊 daily update ${DATE}"
             git push
           fi
+
+      - name: 🚨 건전성 최종 판정 (CRITICAL 시 차단)
+        if: always()
+        run: python scripts/health_gate.py --enforce
+
+      - name: 🔔 소비자 연쇄 트리거 (alert + html 즉시 실행)
+        if: success()
+        env:
+          DISPATCH_PAT: ${{ secrets.PRIVATE_DISPATCH_PAT }}
+        run: |
+          if [ -z "$DISPATCH_PAT" ]; then
+            echo "⏭️ PRIVATE_DISPATCH_PAT 미설정 — dispatch 건너뜀"
+            exit 0
+          fi
+          curl -sS --fail -X POST \
+            -H "Authorization: Bearer $DISPATCH_PAT" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/daifulee/solidus-briefing/dispatches \
+            -d '{"event_type":"data-updated"}'
+          echo "✅ data-updated dispatch 발신 완료"
