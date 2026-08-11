@@ -2,10 +2,10 @@
   "date": "2026-08-09",
   "btc_close": 64844.89,
   "vix": 14.9,
-  "move": 72.03,
+  "move": 70.88,
   "dxy": 99.6,
-  "dgs10": 4.66,
-  "oas_hy": 2.71,
+  "dgs10": 4.65,
+  "oas_hy": 2.7,
   "nfci": -0.529,
   "mvrv": 1.2301,
   "rsi_14": 54.25,
@@ -20,7 +20,7 @@
   "usd_krw": 1422.3,
   "nupl": 0.1871,
   "hashrate": 906199298.0,
-  "generated_at": "2026-08-10T09:37:02.582395+00:00",
+  "generated_at": "2026-08-11T06:40:35.912121+00:00",
   "engine": "SOLIDUS_v3.2.0_HALVING_CONVICTION",
   "fetcher_version": "2.0.0",
   "onchain_status": {
@@ -29,49 +29,58 @@
     "columns": {
       "CapMVRVCur": {
         "source": "cm_api",
-        "latest": "2026-08-09"
+        "latest": "2026-08-10"
       },
       "CapMrktCurUSD": {
         "source": "cm_api",
-        "latest": "2026-08-09"
+        "latest": "2026-08-10"
       },
       "AdrActCnt": {
         "source": "cm_api",
-        "latest": "2026-08-09"
+        "latest": "2026-08-10"
       },
       "AdrBalCnt": {
         "source": "cm_api",
-        "latest": "2026-08-09"
+        "latest": "2026-08-10"
       },
       "HashRate": {
         "source": "cm_api",
-        "latest": "2026-08-09"
+        "latest": "2026-08-10"
       },
       "TxCnt": {
         "source": "cm_api",
-        "latest": "2026-08-09"
+        "latest": "2026-08-10"
       },
       "SplyCur": {
         "source": "cm_api",
-        "latest": "2026-08-09"
+        "latest": "2026-08-10"
       },
       "FlowInExUSD": {
         "source": "cm_api",
-        "latest": "2026-08-09"
+        "latest": "2026-08-10"
       },
       "FlowOutExUSD": {
         "source": "cm_api",
-        "latest": "2026-08-09"
+        "latest": "2026-08-10"
       }
     },
     "errors": []
   },
   "data_health": {
     "gate_version": "1.0.0",
-    "checked_at": "2026-08-10T09:37:10.267494+00:00",
-    "status": "OK",
+    "checked_at": "2026-08-11T06:40:47.983761+00:00",
+    "status": "WARN",
     "critical": [],
-    "warn": [],
+    "warn": [
+      {
+        "column": "MOVE",
+        "run_days": 24,
+        "limit": 6,
+        "frozen_since": "2026-07-17",
+        "value": 70.87999725341797,
+        "check": "frozen"
+      }
+    ],
     "info": [
       {
         "column": "ICSA",
@@ -83,7 +92,7 @@
       }
     ],
     "last_date": "2026-08-09",
-    "lag_days": 1,
+    "lag_days": 2,
     "rows": 3874
   }
 }
