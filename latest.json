@@ -1,26 +1,26 @@
 {
-  "date": "2026-08-09",
-  "btc_close": 64844.89,
-  "vix": 14.9,
+  "date": "2026-08-10",
+  "btc_close": 63910.59,
+  "vix": 15.46,
   "move": 70.88,
-  "dxy": 99.6,
-  "dgs10": 4.65,
+  "dxy": 99.81,
+  "dgs10": 4.72,
   "oas_hy": 2.7,
   "nfci": -0.529,
-  "mvrv": 1.2301,
-  "rsi_14": 54.25,
-  "btc_100dma": 67862.22,
-  "btc_spy_corr120": 0.3411,
+  "mvrv": 1.2122,
+  "rsi_14": 48.35,
+  "btc_100dma": 67714.76,
+  "btc_spy_corr120": 0.3435,
   "phase": "WINTER",
   "cycle": 4,
-  "days_since_halving": 841,
-  "fear_greed": 31.0,
-  "gold": 4340.7,
-  "spy": 773.26,
-  "usd_krw": 1422.3,
-  "nupl": 0.1871,
-  "hashrate": 906199298.0,
-  "generated_at": "2026-08-11T06:40:35.912121+00:00",
+  "days_since_halving": 842,
+  "fear_greed": 30.0,
+  "gold": 4361.8,
+  "spy": 773.03,
+  "usd_krw": 1407.0,
+  "nupl": 0.1751,
+  "hashrate": 880851064.0,
+  "generated_at": "2026-08-12T07:01:15.065997+00:00",
   "engine": "SOLIDUS_v3.2.0_HALVING_CONVICTION",
   "fetcher_version": "2.0.0",
   "onchain_status": {
@@ -29,52 +29,52 @@
     "columns": {
       "CapMVRVCur": {
         "source": "cm_api",
-        "latest": "2026-08-10"
+        "latest": "2026-08-11"
       },
       "CapMrktCurUSD": {
         "source": "cm_api",
-        "latest": "2026-08-10"
+        "latest": "2026-08-11"
       },
       "AdrActCnt": {
         "source": "cm_api",
-        "latest": "2026-08-10"
+        "latest": "2026-08-11"
       },
       "AdrBalCnt": {
         "source": "cm_api",
-        "latest": "2026-08-10"
+        "latest": "2026-08-11"
       },
       "HashRate": {
         "source": "cm_api",
-        "latest": "2026-08-10"
+        "latest": "2026-08-11"
       },
       "TxCnt": {
         "source": "cm_api",
-        "latest": "2026-08-10"
+        "latest": "2026-08-11"
       },
       "SplyCur": {
         "source": "cm_api",
-        "latest": "2026-08-10"
+        "latest": "2026-08-11"
       },
       "FlowInExUSD": {
         "source": "cm_api",
-        "latest": "2026-08-10"
+        "latest": "2026-08-11"
       },
       "FlowOutExUSD": {
         "source": "cm_api",
-        "latest": "2026-08-10"
+        "latest": "2026-08-11"
       }
     },
     "errors": []
   },
   "data_health": {
     "gate_version": "1.0.0",
-    "checked_at": "2026-08-11T06:40:47.983761+00:00",
+    "checked_at": "2026-08-12T07:02:34.881018+00:00",
     "status": "WARN",
     "critical": [],
     "warn": [
       {
         "column": "MOVE",
-        "run_days": 24,
+        "run_days": 25,
         "limit": 6,
         "frozen_since": "2026-07-17",
         "value": 70.87999725341797,
@@ -91,8 +91,8 @@
         "note": "전 구간 미수집"
       }
     ],
-    "last_date": "2026-08-09",
+    "last_date": "2026-08-10",
     "lag_days": 2,
-    "rows": 3874
+    "rows": 3875
   }
 }
