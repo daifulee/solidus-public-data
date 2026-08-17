@@ -1,26 +1,26 @@
 {
-  "date": "2026-08-14",
-  "btc_close": 62975.59,
+  "date": "2026-08-15",
+  "btc_close": 63024.32,
   "vix": 14.25,
   "move": 69.58,
   "dxy": 99.67,
   "dgs10": 4.696,
   "oas_hy": 2.71,
   "nfci": -0.549,
-  "mvrv": 1.1947,
-  "rsi_14": 42.71,
-  "btc_100dma": 67040.87,
-  "btc_spy_corr120": 0.33,
+  "mvrv": 1.1968,
+  "rsi_14": 43.12,
+  "btc_100dma": 66871.01,
+  "btc_spy_corr120": 0.3145,
   "phase": "WINTER",
   "cycle": 4,
-  "days_since_halving": 846,
-  "fear_greed": 29.0,
-  "gold": 4437.3,
+  "days_since_halving": 847,
+  "fear_greed": 34.0,
+  "gold": 4380.4,
   "spy": 776.34,
   "usd_krw": 1416.85,
-  "nupl": 0.163,
-  "hashrate": 944221640.0,
-  "generated_at": "2026-08-16T06:16:50.964781+00:00",
+  "nupl": 0.1644,
+  "hashrate": 918873406.0,
+  "generated_at": "2026-08-17T06:25:18.815425+00:00",
   "engine": "SOLIDUS_v3.2.0_HALVING_CONVICTION",
   "fetcher_version": "2.0.0",
   "onchain_status": {
@@ -29,46 +29,46 @@
     "columns": {
       "CapMVRVCur": {
         "source": "cm_api",
-        "latest": "2026-08-15"
+        "latest": "2026-08-16"
       },
       "CapMrktCurUSD": {
         "source": "cm_api",
-        "latest": "2026-08-15"
+        "latest": "2026-08-16"
       },
       "AdrActCnt": {
         "source": "cm_api",
-        "latest": "2026-08-15"
+        "latest": "2026-08-16"
       },
       "AdrBalCnt": {
         "source": "cm_api",
-        "latest": "2026-08-15"
+        "latest": "2026-08-16"
       },
       "HashRate": {
         "source": "cm_api",
-        "latest": "2026-08-15"
+        "latest": "2026-08-16"
       },
       "TxCnt": {
         "source": "cm_api",
-        "latest": "2026-08-15"
+        "latest": "2026-08-16"
       },
       "SplyCur": {
         "source": "cm_api",
-        "latest": "2026-08-15"
+        "latest": "2026-08-16"
       },
       "FlowInExUSD": {
         "source": "cm_api",
-        "latest": "2026-08-15"
+        "latest": "2026-08-16"
       },
       "FlowOutExUSD": {
         "source": "cm_api",
-        "latest": "2026-08-15"
+        "latest": "2026-08-16"
       }
     },
     "errors": []
   },
   "data_health": {
     "gate_version": "1.0.0",
-    "checked_at": "2026-08-16T06:16:59.010167+00:00",
+    "checked_at": "2026-08-17T06:25:26.577512+00:00",
     "status": "OK",
     "critical": [],
     "warn": [],
@@ -82,8 +82,8 @@
         "note": "전 구간 미수집"
       }
     ],
-    "last_date": "2026-08-14",
+    "last_date": "2026-08-15",
     "lag_days": 2,
-    "rows": 3879
+    "rows": 3880
   }
 }
