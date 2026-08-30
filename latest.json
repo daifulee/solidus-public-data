@@ -20,7 +20,7 @@
   "usd_krw": 1383.49,
   "nupl": 0.3396,
   "hashrate": 913069941.0,
-  "generated_at": "2026-08-29T11:49:24.322568+00:00",
+  "generated_at": "2026-08-30T10:45:55.264874+00:00",
   "engine": "SOLIDUS_v3.2.0_HALVING_CONVICTION",
   "fetcher_version": "2.0.0",
   "onchain_status": {
@@ -29,46 +29,46 @@
     "columns": {
       "CapMVRVCur": {
         "source": "cm_api",
-        "latest": "2026-08-28"
+        "latest": "2026-08-29"
       },
       "CapMrktCurUSD": {
         "source": "cm_api",
-        "latest": "2026-08-28"
+        "latest": "2026-08-29"
       },
       "AdrActCnt": {
         "source": "cm_api",
-        "latest": "2026-08-28"
+        "latest": "2026-08-29"
       },
       "AdrBalCnt": {
         "source": "cm_api",
-        "latest": "2026-08-28"
+        "latest": "2026-08-29"
       },
       "HashRate": {
         "source": "cm_api",
-        "latest": "2026-08-28"
+        "latest": "2026-08-29"
       },
       "TxCnt": {
         "source": "cm_api",
-        "latest": "2026-08-28"
+        "latest": "2026-08-29"
       },
       "SplyCur": {
         "source": "cm_api",
-        "latest": "2026-08-28"
+        "latest": "2026-08-29"
       },
       "FlowInExUSD": {
         "source": "cm_api",
-        "latest": "2026-08-28"
+        "latest": "2026-08-29"
       },
       "FlowOutExUSD": {
         "source": "cm_api",
-        "latest": "2026-08-28"
+        "latest": "2026-08-29"
       }
     },
     "errors": []
   },
   "data_health": {
     "gate_version": "1.0.0",
-    "checked_at": "2026-08-29T11:49:36.068386+00:00",
+    "checked_at": "2026-08-30T10:46:07.984520+00:00",
     "status": "OK",
     "critical": [],
     "warn": [],
@@ -83,7 +83,7 @@
       }
     ],
     "last_date": "2026-08-27",
-    "lag_days": 2,
+    "lag_days": 3,
     "rows": 3892
   }
 }
