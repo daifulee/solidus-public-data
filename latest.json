@@ -4,8 +4,8 @@
   "vix": 15.2,
   "move": 79.71,
   "dxy": 99.56,
-  "dgs10": 4.796,
-  "oas_hy": 2.65,
+  "dgs10": 4.79,
+  "oas_hy": 2.66,
   "nfci": -0.558,
   "mvrv": 1.454,
   "rsi_14": 65.21,
@@ -20,7 +20,7 @@
   "usd_krw": 1372.86,
   "nupl": 0.3122,
   "hashrate": 856784807.0,
-  "generated_at": "2026-09-03T10:10:35.172378+00:00",
+  "generated_at": "2026-09-04T10:00:57.498391+00:00",
   "engine": "SOLIDUS_v3.2.0_HALVING_CONVICTION",
   "fetcher_version": "2.0.0",
   "onchain_status": {
@@ -29,46 +29,46 @@
     "columns": {
       "CapMVRVCur": {
         "source": "cm_api",
-        "latest": "2026-09-02"
+        "latest": "2026-09-03"
       },
       "CapMrktCurUSD": {
         "source": "cm_api",
-        "latest": "2026-09-02"
+        "latest": "2026-09-03"
       },
       "AdrActCnt": {
         "source": "cm_api",
-        "latest": "2026-09-02"
+        "latest": "2026-09-03"
       },
       "AdrBalCnt": {
         "source": "cm_api",
-        "latest": "2026-09-02"
+        "latest": "2026-09-03"
       },
       "HashRate": {
         "source": "cm_api",
-        "latest": "2026-09-02"
+        "latest": "2026-09-03"
       },
       "TxCnt": {
         "source": "cm_api",
-        "latest": "2026-09-02"
+        "latest": "2026-09-03"
       },
       "SplyCur": {
         "source": "cm_api",
-        "latest": "2026-09-02"
+        "latest": "2026-09-03"
       },
       "FlowInExUSD": {
         "source": "cm_api",
-        "latest": "2026-09-02"
+        "latest": "2026-09-03"
       },
       "FlowOutExUSD": {
         "source": "cm_api",
-        "latest": "2026-09-02"
+        "latest": "2026-09-03"
       }
     },
     "errors": []
   },
   "data_health": {
     "gate_version": "1.0.0",
-    "checked_at": "2026-09-03T10:10:48.810386+00:00",
+    "checked_at": "2026-09-04T10:02:30.994909+00:00",
     "status": "OK",
     "critical": [],
     "warn": [],
@@ -83,7 +83,7 @@
       }
     ],
     "last_date": "2026-09-02",
-    "lag_days": 1,
+    "lag_days": 2,
     "rows": 3898
   }
 }
