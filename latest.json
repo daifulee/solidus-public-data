@@ -1,26 +1,26 @@
 {
-  "date": "2026-09-11",
-  "btc_close": 77173.8,
+  "date": "2026-09-12",
+  "btc_close": 77270.47,
   "vix": 15.84,
   "move": 82.21,
   "dxy": 99.12,
   "dgs10": 4.975,
   "oas_hy": 2.7,
   "nfci": -0.564,
-  "mvrv": 1.4506,
-  "rsi_14": 54.79,
-  "btc_100dma": 66873.37,
-  "btc_spy_corr120": 0.2796,
+  "mvrv": 1.4519,
+  "rsi_14": 55.1,
+  "btc_100dma": 67008.06,
+  "btc_spy_corr120": 0.2663,
   "phase": "WINTER",
   "cycle": 4,
-  "days_since_halving": 874,
-  "fear_greed": 56.0,
-  "gold": 4366.2,
+  "days_since_halving": 875,
+  "fear_greed": 63.0,
+  "gold": 4408.9,
   "spy": 764.29,
   "usd_krw": 1348.17,
-  "nupl": 0.3107,
-  "hashrate": 1020033717.0,
-  "generated_at": "2026-09-12T09:39:12.778409+00:00",
+  "nupl": 0.3113,
+  "hashrate": 994691262.0,
+  "generated_at": "2026-09-13T10:40:26.202236+00:00",
   "engine": "SOLIDUS_v3.2.0_HALVING_CONVICTION",
   "fetcher_version": "2.0.0",
   "onchain_status": {
@@ -29,49 +29,58 @@
     "columns": {
       "CapMVRVCur": {
         "source": "cm_api",
-        "latest": "2026-09-11"
+        "latest": "2026-09-12"
       },
       "CapMrktCurUSD": {
         "source": "cm_api",
-        "latest": "2026-09-11"
+        "latest": "2026-09-12"
       },
       "AdrActCnt": {
         "source": "cm_api",
-        "latest": "2026-09-11"
+        "latest": "2026-09-12"
       },
       "AdrBalCnt": {
         "source": "cm_api",
-        "latest": "2026-09-11"
+        "latest": "2026-09-12"
       },
       "HashRate": {
         "source": "cm_api",
-        "latest": "2026-09-11"
+        "latest": "2026-09-12"
       },
       "TxCnt": {
         "source": "cm_api",
-        "latest": "2026-09-11"
+        "latest": "2026-09-12"
       },
       "SplyCur": {
         "source": "cm_api",
-        "latest": "2026-09-11"
+        "latest": "2026-09-12"
       },
       "FlowInExUSD": {
         "source": "cm_api",
-        "latest": "2026-09-11"
+        "latest": "2026-09-12"
       },
       "FlowOutExUSD": {
         "source": "cm_api",
-        "latest": "2026-09-11"
+        "latest": "2026-09-12"
       }
     },
     "errors": []
   },
   "data_health": {
     "gate_version": "1.0.0",
-    "checked_at": "2026-09-12T09:39:26.770820+00:00",
-    "status": "OK",
+    "checked_at": "2026-09-13T10:40:34.377110+00:00",
+    "status": "WARN",
     "critical": [],
-    "warn": [],
+    "warn": [
+      {
+        "column": "DFF",
+        "run_days": 61,
+        "limit": 60,
+        "frozen_since": "2026-07-14",
+        "value": 3.63,
+        "check": "frozen"
+      }
+    ],
     "info": [
       {
         "column": "ICSA",
@@ -82,8 +91,8 @@
         "note": "전 구간 미수집"
       }
     ],
-    "last_date": "2026-09-11",
+    "last_date": "2026-09-12",
     "lag_days": 1,
-    "rows": 3907
+    "rows": 3908
   }
 }
