@@ -1,26 +1,26 @@
 {
-  "date": "2026-09-21",
-  "btc_close": 86602.91,
+  "date": "2026-09-22",
+  "btc_close": 86172.28,
   "vix": 14.87,
   "move": 81.2,
   "dxy": 100.43,
-  "dgs10": 4.963,
-  "oas_hy": 2.68,
+  "dgs10": 4.96,
+  "oas_hy": 2.66,
   "nfci": -0.56,
-  "mvrv": 1.621,
-  "rsi_14": 73.85,
-  "btc_100dma": 68511.16,
-  "btc_spy_corr120": 0.3058,
+  "mvrv": 1.6122,
+  "rsi_14": 72.17,
+  "btc_100dma": 68715.78,
+  "btc_spy_corr120": 0.3059,
   "phase": "WINTER",
   "cycle": 4,
-  "days_since_halving": 884,
-  "fear_greed": 70.0,
-  "gold": 4383.9,
+  "days_since_halving": 885,
+  "fear_greed": 78.0,
+  "gold": 4376.4,
   "spy": 773.5,
-  "usd_krw": 1384.86,
-  "nupl": 0.3831,
-  "hashrate": 983309095.0,
-  "generated_at": "2026-09-22T10:24:23.595726+00:00",
+  "usd_krw": 1373.68,
+  "nupl": 0.3797,
+  "hashrate": 917315200.0,
+  "generated_at": "2026-09-23T10:19:34.266861+00:00",
   "engine": "SOLIDUS_v3.2.0_HALVING_CONVICTION",
   "fetcher_version": "2.0.0",
   "onchain_status": {
@@ -29,46 +29,46 @@
     "columns": {
       "CapMVRVCur": {
         "source": "cm_api",
-        "latest": "2026-09-21"
+        "latest": "2026-09-22"
       },
       "CapMrktCurUSD": {
         "source": "cm_api",
-        "latest": "2026-09-21"
+        "latest": "2026-09-22"
       },
       "AdrActCnt": {
         "source": "cm_api",
-        "latest": "2026-09-21"
+        "latest": "2026-09-22"
       },
       "AdrBalCnt": {
         "source": "cm_api",
-        "latest": "2026-09-21"
+        "latest": "2026-09-22"
       },
       "HashRate": {
         "source": "cm_api",
-        "latest": "2026-09-21"
+        "latest": "2026-09-22"
       },
       "TxCnt": {
         "source": "cm_api",
-        "latest": "2026-09-21"
+        "latest": "2026-09-22"
       },
       "SplyCur": {
         "source": "cm_api",
-        "latest": "2026-09-21"
+        "latest": "2026-09-22"
       },
       "FlowInExUSD": {
         "source": "cm_api",
-        "latest": "2026-09-21"
+        "latest": "2026-09-22"
       },
       "FlowOutExUSD": {
         "source": "cm_api",
-        "latest": "2026-09-21"
+        "latest": "2026-09-22"
       }
     },
     "errors": []
   },
   "data_health": {
     "gate_version": "1.0.0",
-    "checked_at": "2026-09-22T10:24:34.356384+00:00",
+    "checked_at": "2026-09-23T10:19:42.870919+00:00",
     "status": "OK",
     "critical": [],
     "warn": [],
@@ -82,8 +82,8 @@
         "note": "전 구간 미수집"
       }
     ],
-    "last_date": "2026-09-21",
+    "last_date": "2026-09-22",
     "lag_days": 1,
-    "rows": 3917
+    "rows": 3918
   }
 }
