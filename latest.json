@@ -1,26 +1,26 @@
 {
-  "date": "2026-10-03",
-  "btc_close": 84763.58,
+  "date": "2026-10-04",
+  "btc_close": 86480.3,
   "vix": 15.31,
   "move": 107.29,
   "dxy": 101.93,
   "dgs10": 5.277,
   "oas_hy": 3.24,
   "nfci": -0.548,
-  "mvrv": 1.5789,
-  "rsi_14": 63.73,
-  "btc_100dma": 71004.72,
-  "btc_spy_corr120": 0.2933,
+  "mvrv": 1.6111,
+  "rsi_14": 68.51,
+  "btc_100dma": 71269.36,
+  "btc_spy_corr120": 0.2919,
   "phase": "WINTER",
   "cycle": 4,
-  "days_since_halving": 896,
-  "fear_greed": 67.0,
+  "days_since_halving": 897,
+  "fear_greed": 65.0,
   "gold": 4162.3,
   "spy": 769.64,
-  "usd_krw": 1342.51,
-  "nupl": 0.3667,
-  "hashrate": 884134504.0,
-  "generated_at": "2026-10-04T11:22:18.286812+00:00",
+  "usd_krw": 1360.59,
+  "nupl": 0.3793,
+  "hashrate": 943420806.0,
+  "generated_at": "2026-10-05T12:45:37.488700+00:00",
   "engine": "SOLIDUS_v3.2.0_HALVING_CONVICTION",
   "fetcher_version": "2.0.0",
   "onchain_status": {
@@ -29,46 +29,46 @@
     "columns": {
       "CapMVRVCur": {
         "source": "cm_api",
-        "latest": "2026-10-03"
+        "latest": "2026-10-04"
       },
       "CapMrktCurUSD": {
         "source": "cm_api",
-        "latest": "2026-10-03"
+        "latest": "2026-10-04"
       },
       "AdrActCnt": {
         "source": "cm_api",
-        "latest": "2026-10-03"
+        "latest": "2026-10-04"
       },
       "AdrBalCnt": {
         "source": "cm_api",
-        "latest": "2026-10-03"
+        "latest": "2026-10-04"
       },
       "HashRate": {
         "source": "cm_api",
-        "latest": "2026-10-03"
+        "latest": "2026-10-04"
       },
       "TxCnt": {
         "source": "cm_api",
-        "latest": "2026-10-03"
+        "latest": "2026-10-04"
       },
       "SplyCur": {
         "source": "cm_api",
-        "latest": "2026-10-03"
+        "latest": "2026-10-04"
       },
       "FlowInExUSD": {
         "source": "cm_api",
-        "latest": "2026-10-03"
+        "latest": "2026-10-04"
       },
       "FlowOutExUSD": {
         "source": "cm_api",
-        "latest": "2026-10-03"
+        "latest": "2026-10-04"
       }
     },
     "errors": []
   },
   "data_health": {
     "gate_version": "1.0.0",
-    "checked_at": "2026-10-04T11:22:28.698131+00:00",
+    "checked_at": "2026-10-05T12:45:49.709275+00:00",
     "status": "OK",
     "critical": [],
     "warn": [],
@@ -82,8 +82,8 @@
         "note": "전 구간 미수집"
       }
     ],
-    "last_date": "2026-10-03",
+    "last_date": "2026-10-04",
     "lag_days": 1,
-    "rows": 3929
+    "rows": 3930
   }
 }
